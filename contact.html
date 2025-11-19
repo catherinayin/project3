@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Julia Mooncake – Home</title>
+  <title>Julia Mooncake – Contact</title>
 
-  <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+    /* =========================================
+       GLOBAL & UTILITY STYLES
+       ========================================= */
 
     body {
       margin: 0;
@@ -43,10 +40,6 @@
       letter-spacing: 0.03em;
     }
 
-    p {
-      line-height: 1.6;
-    }
-
     a {
       color: #1c1322;
       text-decoration: none;
@@ -57,13 +50,36 @@
       text-decoration: underline;
     }
 
-    /* === HEADER (copied from menu page) === */
+    .cta-button {
+      background-color: #FFBA51;
+      color: #000000;
+      border: none;
+      padding: 15px 52px;
+      border-radius: 999px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 8px;
+      display: inline-block; 
+      text-decoration: none; 
+    }
+
+    .cta-button:hover {
+      filter: brightness(1.08);
+      text-decoration: none;
+    }
+    
+    /* =========================================
+       HEADER STYLES
+       ========================================= */
 
     .site-header {
       background-color: #f4e7ff;
-      position: relative;
-      padding-top: 12px;     /* slightly shorter bar */
-      padding-bottom: 16px;
+      padding-top: 12px;     
+      padding-bottom: 16px; 
+      position: relative; 
     }
 
     .header-inner {
@@ -89,7 +105,7 @@
     }
 
     .active {
-      text-decoration: none; /* no underline on active */
+      text-decoration: none; 
     }
 
     .logo-wrapper {
@@ -104,6 +120,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 10;
     }
 
     .logo-wrapper a {
@@ -124,8 +141,10 @@
     .logo-wrapper:hover img {
       transform: rotate(360deg);
     }
-
-    /* === FOOTER (copied from menu page) === */
+    
+    /* =========================================
+       FOOTER STYLES
+       ========================================= */
 
     .site-footer {
       background-color: #f4e7ff;
@@ -135,7 +154,7 @@
       letter-spacing: 0.08em;
       color: #241728;
       border-top: 2px solid #e4d3f4;
-      margin-top: auto; /* pushes footer to bottom if content is short */
+      margin-top: auto; /* Pushes the footer to the bottom */
     }
 
     .footer-inner {
@@ -166,6 +185,7 @@
       font-size: 13px;
       line-height: 2.4;
       margin-bottom: 6px;
+      font-family: 'Karla', sans-serif; 
     }
 
     .icon {
@@ -191,146 +211,123 @@
       opacity: 0.7;
     }
 
-    /* === HERO + CONTENT (your original index layout) === */
-
-    .hero-image-wrapper {
-      width: 100%;
-      text-align: center;
-      margin: 16px auto;
-      padding-left: 0;
+    /* =========================================
+       CONTACT PAGE SPECIFIC STYLES
+       ========================================= */
+    
+    .contact-container {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 120px;
     }
 
-    .hero-image {
-      max-width: 1000px;
-      width: 100%;
-      display: inline-block;
+    .contact-left {
+        flex-basis: 50%;
+        max-width: 500px;
+        padding-top: 20px; /* Align text better with the form */
     }
 
-    .intro-text {
-      font-family: 'Karla', sans-serif;
-      font-size: 18px;
-      line-height: 1.7;
-      margin-top: 12px;
-      margin-bottom: 50px;
-      text-align: center;
+    .contact-title {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin: 0 0 15px;
     }
 
-    .intro-text-area {
-      padding-left: 0;
-      padding-right: 0;
+    .contact-intro {
+        font-family: 'Karla', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        color: #555;
     }
 
-    .intro-text-box {
-      max-width: 1000px;
-      margin: 0 auto;
+    .contact-illustration {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
     }
 
-    .intro-bar {
-      background-color: #cdb1d6;
-      padding: 12px 0;
+    /* Form Styles */
+    .contact-right {
+        flex-basis: 50%;
+        max-width: 550px;
+        padding: 40px;
+        background-color: #ffffff;
+        border: 1px solid #e4d3f4;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
-    /* TOP SELLERS SECTION */
-
-    .top-sellers-section {
-      background-color: #ffffff;
-      padding: 0px 0 80px;
+    .form-title {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
     }
 
-    .top-sellers-header {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      align-items: center;
-      justify-content: center;
-      column-gap: 32px;
-      margin-bottom: 32px;
+    .form-group {
+        margin-bottom: 25px;
     }
 
-    .lantern {
-      height: 54px;
-      width: auto;
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-family: 'Karla', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
     }
 
-    .lantern-right {
-      height: 110px;
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d3b9e8;
+        border-radius: 6px;
+        box-sizing: border-box;
+        font-family: 'Karla', sans-serif;
+        font-size: 16px;
+        background-color: #f9f7fc;
     }
 
-    .lantern-left {
-      margin-top: -56px;
+    .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+        padding: 15px;
     }
 
-    .top-sellers-title {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 22px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-align: center;
+    /* Styling the text inside the message box */
+    .form-group textarea::placeholder {
+        color: #a084b6;
+        font-style: italic;
     }
 
-    .top-sellers-main {
-      position: relative;
-      text-align: center;
+    .submit-button {
+        background-color: #FFBA51;
+        color: #000000;
+        border: none;
+        padding: 15px 45px;
+        border-radius: 999px;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+        transition: background-color 0.2s;
     }
 
-    .top-sellers-band {
-      position: relative;
-      width: 100%;
-      margin: 0 auto 24px;
-    }
-
-    .top-sellers-yellow {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 140px;
-      background-color: #FFD684;
-      border-radius: 4px;
-      z-index: 0;
-    }
-
-    .top-sellers-image {
-      position: relative;
-      z-index: 1;
-      display: block;
-      margin: 0 auto;
-      max-width: 90%;
-    }
-
-    .top-sellers-labels {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 850px;
-      margin: 0 auto 40px;
-      font-family: 'Karla', sans-serif;
-      font-size: 15px;
-      text-align: center;
-    }
-
-    .menu-cta {
-      background-color: #FFBA51;
-      color: black;
-      border: none;
-      padding: 15px 52px;
-      border-radius: 999px;
-      font-family: 'Karla', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .menu-cta:hover {
-      filter: brightness(1.08);
-    }
-
-    .bunny-image {
-      position: absolute;
-      left: 0;
-      bottom: -40px;
-      width: 140px;
-      z-index: 3;
+    .submit-button:hover {
+        background-color: #e5a849;
     }
 
   </style>
@@ -339,7 +336,6 @@
 <body>
   <div class="page-wrapper">
 
-    <!-- HEADER (same as menu page) -->
     <header class="site-header">
       <div class="header-inner content-container">
 
@@ -355,64 +351,53 @@
         </div>
 
         <nav class="nav-right">
-          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="active">Contact</a>
           <a href="order.html">Order</a>
         </nav>
 
       </div>
     </header>
 
-    <!-- HERO IMAGE -->
-    <div class="content-container">
-      <div class="hero-image-wrapper">
-        <img src="story1.png" class="hero-image" alt="Bunnies making mooncakes">
-      </div>
-    </div>
+    <main>
+        <div class="contact-container content-container">
+            
+            <div class="contact-left">
+                <h1 class="contact-title">GET IN TOUCH</h1>
+                <p class="contact-intro">
+                    We'd love to hear from you! Order inquiries, collaborations, or feedback — send us a message below.
+                </p>
+                <img src="friends.png" alt="Decorative illustration of bunnies on a mooncake-shaped hut" class="contact-illustration">
+            </div>
 
-    <!-- TEXT UNDER IMAGE -->
-    <div class="content-container intro-text-area">
-      <div class="intro-text-box">
-        <p class="intro-text">
-          At Julia Moon Cake, every treat is handmade with traditional recipes and<br>
-          a touch of modern flavor. Perfect for family gatherings, gifts, and festivals.
-        </p>
-      </div>
-    </div>
+            <div class="contact-right">
+                <h2 class="form-title">SEND A MESSAGE</h2>
+                
+                <form action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-    <!-- THIN PURPLE BAR -->
-    <div class="intro-bar"></div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-    <!-- TOP SELLERS SECTION -->
-    <section class="top-sellers-section">
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" 
+                            placeholder="Ask about flavours, bulk orders, collaborations, etc..." required></textarea>
+                    </div>
 
-      <div class="content-container top-sellers-header">
-        <img src="lone.png" alt="Lantern" class="lantern lantern-left">
-        <h2 class="top-sellers-title">TOP SELLERS</h2>
-        <img src="ltwo.png" alt="Lantern" class="lantern lantern-right">
-      </div>
-
-      <div class="content-container top-sellers-main">
-
-        <div class="top-sellers-band">
-          <div class="top-sellers-yellow"></div>
-          <img src="3mc.png" alt="Top Selling Mooncakes" class="top-sellers-image">
+                    <button type="submit" class="submit-button">SUBMIT</button>
+                    
+                </form>
+            </div>
+            
         </div>
+    </main>
 
-        <div class="top-sellers-labels">
-          <span>Double Yolk White Lotus</span>
-          <span>Deluxe Sampler Pack</span>
-          <span>Mixed Nuts</span>
-        </div>
-
-        <button class="menu-cta">CHECK OUT THE MENU</button>
-
-        <img src="bunnylant.png" alt="Bunny holding lantern" class="bunny-image">
-
-      </div>
-
-    </section>
-
-    <!-- FOOTER (same as menu page) -->
     <footer class="site-footer">
       <div class="footer-inner content-container">
 
@@ -429,7 +414,6 @@
 
           <div class="footer-contact-list">
 
-            <!-- Email -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -439,7 +423,6 @@
               <span>JULIAMOONCAKE@GMAIL.COM</span>
             </div>
 
-            <!-- Location -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -449,7 +432,6 @@
               <span>WATERLOO, ONTARIO</span>
             </div>
 
-            <!-- Hours -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -459,14 +441,12 @@
               <span>MON–FRI, 10AM – 6PM</span>
             </div>
 
-            <!-- Phone -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.13 4.1 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.67a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
               <span>123-456-7890</span>
-  
             </div>
 
           </div>

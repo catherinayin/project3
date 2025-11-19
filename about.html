@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Julia Mooncake – Home</title>
+  <title>Julia Mooncake – About</title>
 
-  <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+    /* =========================================
+       GLOBAL & UTILITY STYLES
+       ========================================= */
 
     body {
       margin: 0;
@@ -43,10 +40,6 @@
       letter-spacing: 0.03em;
     }
 
-    p {
-      line-height: 1.6;
-    }
-
     a {
       color: #1c1322;
       text-decoration: none;
@@ -57,13 +50,37 @@
       text-decoration: underline;
     }
 
-    /* === HEADER (copied from menu page) === */
+    .cta-button {
+      background-color: #FFBA51;
+      color: #000000;
+      border: none;
+      padding: 15px 52px;
+      border-radius: 999px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 8px;
+      display: inline-block; 
+      text-decoration: none; 
+    }
+
+    .cta-button:hover {
+      filter: brightness(1.08);
+      text-decoration: none;
+    }
+    
+    /* =========================================
+       HEADER STYLES
+       ========================================= */
 
     .site-header {
       background-color: #f4e7ff;
-      position: relative;
-      padding-top: 12px;     /* slightly shorter bar */
-      padding-bottom: 16px;
+      /* Adjusted padding top back to a standard value as visuals are removed */
+      padding-top: 12px;     
+      padding-bottom: 16px; 
+      position: relative; 
     }
 
     .header-inner {
@@ -89,7 +106,7 @@
     }
 
     .active {
-      text-decoration: none; /* no underline on active */
+      text-decoration: none; 
     }
 
     .logo-wrapper {
@@ -104,6 +121,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 10;
     }
 
     .logo-wrapper a {
@@ -124,8 +142,10 @@
     .logo-wrapper:hover img {
       transform: rotate(360deg);
     }
-
-    /* === FOOTER (copied from menu page) === */
+    
+    /* =========================================
+       FOOTER STYLES (Omitted for brevity, unchanged)
+       ========================================= */
 
     .site-footer {
       background-color: #f4e7ff;
@@ -135,7 +155,7 @@
       letter-spacing: 0.08em;
       color: #241728;
       border-top: 2px solid #e4d3f4;
-      margin-top: auto; /* pushes footer to bottom if content is short */
+      margin-top: 60px; 
     }
 
     .footer-inner {
@@ -166,6 +186,7 @@
       font-size: 13px;
       line-height: 2.4;
       margin-bottom: 6px;
+      font-family: 'Karla', sans-serif; 
     }
 
     .icon {
@@ -191,146 +212,132 @@
       opacity: 0.7;
     }
 
-    /* === HERO + CONTENT (your original index layout) === */
+    /* =========================================
+       ABOUT PAGE SPECIFIC STYLES
+       ========================================= */
+    
+    .about-hero {
+        text-align: center;
+        /* Adjusted padding top back to a standard value as visuals are removed */
+        padding-top: 55px; 
+        padding-bottom: 35px;
+        position: relative; 
+    }
+    
+    /* Removed .about-visuals-container and .about-visuals styles */
 
-    .hero-image-wrapper {
-      width: 100%;
-      text-align: center;
-      margin: 16px auto;
-      padding-left: 0;
+    .about-title {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.20em;
+        text-transform: uppercase;
+        margin-top: 18px;
+        margin-bottom: 25px;
     }
 
-    .hero-image {
-      max-width: 1000px;
-      width: 100%;
-      display: inline-block;
+    .about-description {
+        font-family: 'Karla', sans-serif;
+        font-size: 18px;
+        line-height: 1.65;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
-    .intro-text {
-      font-family: 'Karla', sans-serif;
-      font-size: 18px;
-      line-height: 1.7;
-      margin-top: 12px;
-      margin-bottom: 50px;
-      text-align: center;
+    .about-separator {
+        background-color: #CDB1D6; 
+        height: 35px;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
-    .intro-text-area {
-      padding-left: 0;
-      padding-right: 0;
+    /* Meet Julia & Her Craft Section (Omitted for brevity, largely unchanged) */
+    .section-meet-craft {
+        padding: 0 0 60px;
+        display: flex; 
+        justify-content: center;
+        gap: 80px; 
     }
 
-    .intro-text-box {
-      max-width: 1000px;
-      margin: 0 auto;
+    .meet-julia-column {
+        flex-basis: 40%; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .intro-bar {
-      background-color: #cdb1d6;
-      padding: 12px 0;
+    .meet-julia-column h2 {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 28px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20px;
+        align-self: flex-start; 
     }
 
-    /* TOP SELLERS SECTION */
-
-    .top-sellers-section {
-      background-color: #ffffff;
-      padding: 0px 0 80px;
+    .meet-julia-column p {
+        font-family: 'Karla', sans-serif;
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 45px; 
     }
 
-    .top-sellers-header {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      align-items: center;
-      justify-content: center;
-      column-gap: 32px;
-      margin-bottom: 32px;
+    .julia-image-wrapper {
+        position: relative;
+        width: 100%; 
     }
 
-    .lantern {
-      height: 54px;
-      width: auto;
+    .julia-image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        box-sizing: border-box; 
     }
 
-    .lantern-right {
-      height: 110px;
+    .her-craft-column {
+        flex-basis: 40%; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 90px; 
     }
 
-    .lantern-left {
-      margin-top: -56px;
+    .her-craft-column h2 {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 28px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 15px;
+        align-self: flex-start; 
     }
 
-    .top-sellers-title {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 22px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-align: center;
+    .craft-image-wrapper {
+        width: 75%;
+        margin-bottom: 30px; 
     }
 
-    .top-sellers-main {
-      position: relative;
-      text-align: center;
+    .craft-image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        box-sizing: border-box; 
     }
 
-    .top-sellers-band {
-      position: relative;
-      width: 100%;
-      margin: 0 auto 24px;
+    .craft-text {
+        font-family: 'Karla', sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        padding-top: 10px;
+        margin-bottom: 35px; 
     }
 
-    .top-sellers-yellow {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 140px;
-      background-color: #FFD684;
-      border-radius: 4px;
-      z-index: 0;
-    }
-
-    .top-sellers-image {
-      position: relative;
-      z-index: 1;
-      display: block;
-      margin: 0 auto;
-      max-width: 90%;
-    }
-
-    .top-sellers-labels {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 850px;
-      margin: 0 auto 40px;
-      font-family: 'Karla', sans-serif;
-      font-size: 15px;
-      text-align: center;
-    }
-
-    .menu-cta {
-      background-color: #FFBA51;
-      color: black;
-      border: none;
-      padding: 15px 52px;
-      border-radius: 999px;
-      font-family: 'Karla', sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .menu-cta:hover {
-      filter: brightness(1.08);
-    }
-
-    .bunny-image {
-      position: absolute;
-      left: 0;
-      bottom: -40px;
-      width: 140px;
-      z-index: 3;
+    .section-meet-craft > div {
+        max-width: 500px; 
     }
 
   </style>
@@ -339,13 +346,12 @@
 <body>
   <div class="page-wrapper">
 
-    <!-- HEADER (same as menu page) -->
     <header class="site-header">
       <div class="header-inner content-container">
 
         <nav class="nav-left">
           <a href="menu.html">Menu</a>
-          <a href="about.html">About</a>
+          <a href="about.html" class="active">About</a>
         </nav>
 
         <div class="logo-wrapper">
@@ -362,57 +368,44 @@
       </div>
     </header>
 
-    <!-- HERO IMAGE -->
-    <div class="content-container">
-      <div class="hero-image-wrapper">
-        <img src="story1.png" class="hero-image" alt="Bunnies making mooncakes">
-      </div>
-    </div>
+    <main>
 
-    <!-- TEXT UNDER IMAGE -->
-    <div class="content-container intro-text-area">
-      <div class="intro-text-box">
-        <p class="intro-text">
-          At Julia Moon Cake, every treat is handmade with traditional recipes and<br>
-          a touch of modern flavor. Perfect for family gatherings, gifts, and festivals.
-        </p>
-      </div>
-    </div>
+      <section class="about-hero">
+        <div class="content-container">
+            <h1 class="about-title">ABOUT JULIA MOONCAKE</h1>
 
-    <!-- THIN PURPLE BAR -->
-    <div class="intro-bar"></div>
-
-    <!-- TOP SELLERS SECTION -->
-    <section class="top-sellers-section">
-
-      <div class="content-container top-sellers-header">
-        <img src="lone.png" alt="Lantern" class="lantern lantern-left">
-        <h2 class="top-sellers-title">TOP SELLERS</h2>
-        <img src="ltwo.png" alt="Lantern" class="lantern lantern-right">
-      </div>
-
-      <div class="content-container top-sellers-main">
-
-        <div class="top-sellers-band">
-          <div class="top-sellers-yellow"></div>
-          <img src="3mc.png" alt="Top Selling Mooncakes" class="top-sellers-image">
+            <p class="about-description">
+                Julia Moon Cake started from a family kitchen, inspired by the Mid-Autumn Festival's spirit of reunion and gratitude. Each mooncake is handcrafted with care, using time-honored recipes and quality ingredients to bring warmth and nostalgia to every bite.
+            </p>
         </div>
+      </section>
 
-        <div class="top-sellers-labels">
-          <span>Double Yolk White Lotus</span>
-          <span>Deluxe Sampler Pack</span>
-          <span>Mixed Nuts</span>
-        </div>
+      <div class="about-separator"></div>
 
-        <button class="menu-cta">CHECK OUT THE MENU</button>
+      <section class="section-meet-craft content-container"> 
+            <div class="meet-julia-column">
+                <h2>MEET JULIA</h2>
+                <p>
+                    Julia’s passion for baking and sharing traditional desserts inspired the brand. Her dream is to keep the Mid-Autumn tradition alive while adding a modern twist that everyone can enjoy.
+                </p>
+                <div class="julia-image-wrapper">
+                    <img src="juliacao.png" alt="Julia holding a mooncake in front of a car">
+                </div>
+            </div>
 
-        <img src="bunnylant.png" alt="Bunny holding lantern" class="bunny-image">
+            <div class="her-craft-column">
+                <div class="craft-image-wrapper">
+                    <img src="oven.png" alt="Mooncakes baking in the oven with bunnies on top">
+                </div>
+                <h2>HER CRAFT</h2>
+                <p class="craft-text">
+                    Every mooncake is baked in small batches to ensure the perfect balance of flavor and texture. From the silky lotus paste to the golden crust, each step reflects patience and passion.
+                </p>
+                <a href="order.html" class="cta-button">TREAT YOURSELF</a>
+            </div>
+      </section>
+    </main>
 
-      </div>
-
-    </section>
-
-    <!-- FOOTER (same as menu page) -->
     <footer class="site-footer">
       <div class="footer-inner content-container">
 
@@ -428,8 +421,6 @@
           <h3 class="footer-heading">VISIT & CONTACT</h3>
 
           <div class="footer-contact-list">
-
-            <!-- Email -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -438,8 +429,6 @@
               </svg>
               <span>JULIAMOONCAKE@GMAIL.COM</span>
             </div>
-
-            <!-- Location -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -448,8 +437,6 @@
               </svg>
               <span>WATERLOO, ONTARIO</span>
             </div>
-
-            <!-- Hours -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -458,17 +445,13 @@
               </svg>
               <span>MON–FRI, 10AM – 6PM</span>
             </div>
-
-            <!-- Phone -->
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.13 4.1 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.67a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
               <span>123-456-7890</span>
-  
             </div>
-
           </div>
         </div>
 

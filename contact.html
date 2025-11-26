@@ -9,10 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* =========================================
-       GLOBAL & UTILITY STYLES
-       ========================================= */
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -62,24 +58,20 @@
       text-transform: uppercase;
       cursor: pointer;
       margin-top: 8px;
-      display: inline-block; 
-      text-decoration: none; 
+      display: inline-block;
+      text-decoration: none;
     }
 
     .cta-button:hover {
       filter: brightness(1.08);
       text-decoration: none;
     }
-    
-    /* =========================================
-       HEADER STYLES
-       ========================================= */
 
     .site-header {
       background-color: #f4e7ff;
-      padding-top: 12px;     
-      padding-bottom: 16px; 
-      position: relative; 
+      padding-top: 12px;
+      padding-bottom: 16px;
+      position: relative;
     }
 
     .header-inner {
@@ -105,7 +97,7 @@
     }
 
     .active {
-      text-decoration: none; 
+      text-decoration: none;
     }
 
     .logo-wrapper {
@@ -141,10 +133,6 @@
     .logo-wrapper:hover img {
       transform: rotate(360deg);
     }
-    
-    /* =========================================
-       FOOTER STYLES
-       ========================================= */
 
     .site-footer {
       background-color: #f4e7ff;
@@ -154,7 +142,7 @@
       letter-spacing: 0.08em;
       color: #241728;
       border-top: 2px solid #e4d3f4;
-      margin-top: auto; /* Pushes the footer to the bottom */
+      margin-top: auto;
     }
 
     .footer-inner {
@@ -185,7 +173,7 @@
       font-size: 13px;
       line-height: 2.4;
       margin-bottom: 6px;
-      font-family: 'Karla', sans-serif; 
+      font-family: 'Karla', sans-serif;
     }
 
     .icon {
@@ -211,125 +199,118 @@
       opacity: 0.7;
     }
 
-    /* =========================================
-       CONTACT PAGE SPECIFIC STYLES
-       ========================================= */
-    
     .contact-container {
-        padding-top: 60px;
-        padding-bottom: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 120px;
+      padding-top: 60px;
+      padding-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 120px;
     }
 
     .contact-left {
-        flex-basis: 50%;
-        max-width: 500px;
-        padding-top: 20px; /* Align text better with the form */
+      flex-basis: 50%;
+      max-width: 500px;
+      padding-top: 20px;
     }
 
     .contact-title {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        margin: 0 0 15px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0 0 15px;
     }
 
     .contact-intro {
-        font-family: 'Karla', sans-serif;
-        font-size: 18px;
-        line-height: 1.6;
-        margin-bottom: 40px;
-        color: #555;
+      font-family: 'Karla', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      color: #555555;
     }
 
     .contact-illustration {
-        width: 100%;
-        max-width: 450px;
-        height: auto;
+      width: 100%;
+      max-width: 450px;
+      height: auto;
     }
 
-    /* Form Styles */
     .contact-right {
-        flex-basis: 50%;
-        max-width: 550px;
-        padding: 40px;
-        background-color: #ffffff;
-        border: 1px solid #e4d3f4;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      flex-basis: 50%;
+      max-width: 550px;
+      padding: 40px;
+      background-color: #ffffff;
+      border: 1px solid #e4d3f4;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     .form-title {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: 30px;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
     }
 
     .form-group {
-        margin-bottom: 25px;
+      margin-bottom: 25px;
     }
 
     .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-family: 'Karla', sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 8px;
+      font-family: 'Karla', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #d3b9e8;
-        border-radius: 6px;
-        box-sizing: border-box;
-        font-family: 'Karla', sans-serif;
-        font-size: 16px;
-        background-color: #f9f7fc;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d3b9e8;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-family: 'Karla', sans-serif;
+      font-size: 16px;
+      background-color: #f9f7fc;
     }
 
     .form-group textarea {
-        min-height: 120px;
-        resize: vertical;
-        padding: 15px;
+      min-height: 120px;
+      resize: vertical;
+      padding: 15px;
     }
 
-    /* Styling the text inside the message box */
     .form-group textarea::placeholder {
-        color: #a084b6;
-        font-style: italic;
+      color: #a084b6;
+      font-style: italic;
     }
 
     .submit-button {
-        background-color: #FFBA51;
-        color: #000000;
-        border: none;
-        padding: 15px 45px;
-        border-radius: 999px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: inline-block;
-        transition: background-color 0.2s;
+      background-color: #FFBA51;
+      color: #000000;
+      border: none;
+      padding: 15px 45px;
+      border-radius: 999px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.2s;
     }
 
     .submit-button:hover {
-        background-color: #e5a849;
+      background-color: #e5a849;
     }
-
   </style>
 </head>
 
@@ -346,7 +327,7 @@
 
         <div class="logo-wrapper">
           <a href="index.html">
-            <img src="logo.png" alt="Julia Mooncake logo">
+            <img src="logo.png" alt="Julia Mooncake logo" width="130" height="130">
           </a>
         </div>
 
@@ -359,43 +340,44 @@
     </header>
 
     <main>
-        <div class="contact-container content-container">
-            
-            <div class="contact-left">
-                <h1 class="contact-title">GET IN TOUCH</h1>
-                <p class="contact-intro">
-                    We'd love to hear from you! Order inquiries, collaborations, or feedback — send us a message below.
-                </p>
-                <img src="friends.png" alt="Decorative illustration of bunnies on a mooncake-shaped hut" class="contact-illustration">
-            </div>
-
-            <div class="contact-right">
-                <h2 class="form-title">SEND A MESSAGE</h2>
-                
-                <form action="#" method="POST">
-                    
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" 
-                            placeholder="Ask about flavours, bulk orders, collaborations, etc..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-button">SUBMIT</button>
-                    
-                </form>
-            </div>
-            
+      <div class="contact-container content-container">
+        <div class="contact-left">
+          <h1 class="contact-title">GET IN TOUCH</h1>
+          <p class="contact-intro">
+            We'd love to hear from you! Order inquiries, collaborations, or feedback — send us a message below.
+          </p>
+          <img
+            src="friends.png"
+            alt="Decorative illustration of bunnies on a mooncake-shaped hut"
+            class="contact-illustration"
+            width="450"
+            height="350">
         </div>
+
+        <div class="contact-right">
+          <h2 class="form-title">SEND A MESSAGE</h2>
+
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message"
+                placeholder="Ask about flavours, bulk orders, collaborations, etc..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">SUBMIT</button>
+          </form>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
@@ -413,14 +395,13 @@
           <h3 class="footer-heading">VISIT & CONTACT</h3>
 
           <div class="footer-contact-list">
-
             <div class="footer-contact-item">
               <svg class="icon" viewBox="0 0 24 24" fill="none"
                    stroke="#241728" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <polyline points="3,7 12,13 21,7" />
               </svg>
-              <span>JULIAMOONCAKE@GMAIL.COM</span>
+              <a href="mailto:c6yin@uwaterloo.ca">C6YIN@UWATERLOO.CA</a>
             </div>
 
             <div class="footer-contact-item">
